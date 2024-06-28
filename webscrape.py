@@ -24,7 +24,7 @@ for i in urls[:5]:
 # print('Text: ', response.text[:1000])
  
 # Parse the HTML
-    soup = bs(response.text, 'html.parser', parse_only=only_sum_tags)
+    soup = bs(response.text, 'lxml', parse_only=only_sum_tags)
     
 # Extract any HTML tag
     title = soup.find('div', {'class': 'ipc-html-content-inner-div'})
